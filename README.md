@@ -12,12 +12,14 @@ Make an entry in **config/themes.php** under `themes` key
 
 ### Step 2:- 
 Make an entry inside **composer.json** under `psr-4` key
+
 `"HKSManpower\\AutomobileTheme\\": "packages/HKSManpower/AutomobileTheme/src"`
 
 
 
 ### Step 3:- 
-`Make an entry inside **config/app.php** under `providers` key
+Make an entry inside **config/app.php** under `providers` key
+
 `HKSManpower\AutomobileTheme\Providers\AutomobileThemeServiceProvider::class`
 
 ### Step 4:- 
