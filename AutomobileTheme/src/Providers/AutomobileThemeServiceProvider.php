@@ -23,7 +23,7 @@ class AutomobileThemeServiceProvider extends ServiceProvider
         $this->loadTranslationsFrom(__DIR__ . '/../Resources/lang', 'automobiletheme');
 
         $this->publishes([
-            __DIR__ . '/../../publishable/assets' => public_path('themes/default/assets'),
+            __DIR__ . '/../../publishable/assets' => public_path('themes/automobile/assets'),
         ], 'public');
 
         $this->publishes([

@@ -6,10 +6,10 @@ if (mix == 'undefined') {
 
 require("laravel-mix-merge-manifest");
 
+var publicPath = '../../../public/themes/automobile/assets';
+
 if (mix.inProduction()) {
-    var publicPath = 'publishable/assets';
-} else {
-    var publicPath = '../../../public/themes/default/assets';
+    publicPath = 'publishable/assets';
 }
 
 mix.setPublicPath(publicPath).mergeManifest();
@@ -17,9 +17,7 @@ mix.disableNotifications();
 
 mix.js([__dirname + '/src/Resources/assets/js/app.js'], 'js/app.js')
     .copyDirectory(__dirname + '/src/Resources/assets/images', publicPath + "/images")
-    .sass(__dirname + '/src/Resources/assets/sass/admin.scss', 'css/admin.css')
-    .sass(__dirname + '/src/Resources/assets/sass/default.scss', 'css/default.css')
-    .sass(__dirname + '/src/Resources/assets/sass/velocity.scss', 'css/velocity.css')
+    .sass(__dirname + '/src/Resources/assets/sass/automobile.scss', publicPath + '/css/automobile.css')
     .options({
         processCssUrls: false
     });
